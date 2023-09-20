@@ -38,8 +38,30 @@
 	<!-- <div><button>Submit</button></div> -->
 </form>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<style lang="scss">
+	:global(.flatpickr-calendar) {
+        font-family: Arial, Helvetica, sans-serif;
+    }
 
+	:global(.flatpickr-day.selected, .flatpickr-day.selected:hover, .flatpickr-day:hover, .flatpickr-day.today:hover) {
+		background: #66182A;
+		color: #fff;
+		border: none;
+	}
 
+	:global(span.flatpickr-day.today:not(.selected)) {
+		border-bottom-color: #66182A;
 
+		&:hover {
+			border: none;
+		}
+	}
 
+	:global(.flatpickr-time input.flatpickr-hour, .numInput.flatpickr-minute) {
+		font-size: 16px;
+	}
+
+	:global(.flatpickr-time input:focus) {
+		color: #66182A;
+	}
+</style>
